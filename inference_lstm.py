@@ -26,6 +26,8 @@ mpDraw = mp.solutions.drawing_utils
 model = tf.keras.models.load_model("model.h5")
 
 cap = cv2.VideoCapture(0)
+if not cap.isOpened():
+    print("Cannot open camera")
 
 def make_landmark_timestep(results):
     c_lm = []
