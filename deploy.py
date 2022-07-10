@@ -114,6 +114,10 @@ def detectpose(model, lm_list):
     xacsuat = results.tolist()
     xacsuat = xacsuat[0]
     hanhdong = xacsuat.index(max(xacsuat))
+    print(max(xacsuat))
+    if max(xacsuat) < 0.9988:
+        label = "Detecting..."
+        return label
     label = Action[hanhdong]
     return label
 
@@ -210,7 +214,6 @@ elif app_mode == 'Detect signal':
         results = pose.process(imgRGB)
 
         n_time_steps = 40
-        # i = i + 1
         warmup_frames = 0
         print('aaaaaa')
 
@@ -234,8 +237,6 @@ elif app_mode == 'Detect signal':
             fps = 1 / (currTime - prevTime)
             prevTime = currTime
         cv2.imshow("Image", imgRGB)
-            # if cv2.waitKey(1) == ord('q'):
-            #     break
 
         # Dashboard
         kpi1_text.write(f"<h1 style='text-align: center; color: red;'>{int(fps)}</h1>", unsafe_allow_html=True)
@@ -244,11 +245,6 @@ elif app_mode == 'Detect signal':
         imgRGB = image_resize(image=imgRGB, width=720, height=1280)
         stframe.image(imgRGB, channels='RGB', use_column_width=True)
 
-        # img = cv2.resize(img, (0, 0), fx=0.8, fy=0.8)
-        # img = image_resize(image=img, width=720, height=1280)
-        # stframe.image(img, channels='BRG', use_column_width=True)
-
-    st.text('Video Processed')
 
     cap.release()
 
@@ -287,11 +283,12 @@ elif app_mode == 'Signal check':
         ''')
 
     st.sidebar.markdown('---')
-    dongtac = st.text_input("Enter the signals", type="default")
 
     st.markdown(' ## Output')
 
     stframe = st.empty()
+
+    dongtac = st.text_input("Enter the signals", type="default")
 
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
@@ -306,6 +303,7 @@ elif app_mode == 'Signal check':
     with kpi1:
         st.markdown("**FPS**")
         kpi1_text = st.markdown("0")
+    label = ""
 
     with kpi2:
         st.markdown("**Signal**")
@@ -313,8 +311,9 @@ elif app_mode == 'Signal check':
 
     st.markdown("<hr/>", unsafe_allow_html=True)
 
+    lm_list = []
     while True:
-        lm_list = []
+
         # success, img = cap.read()
         i += 1
         ret, img = cap.read()
@@ -324,7 +323,6 @@ elif app_mode == 'Signal check':
         results = pose.process(imgRGB)
 
         n_time_steps = 40
-        # i = i + 1
         warmup_frames = 0
         print('aaaaaa')
 
@@ -333,12 +331,9 @@ elif app_mode == 'Signal check':
                 c_lm = make_landmark_timestep(results)
                 lm_list.append(c_lm)
 
-                print('bbbbbb', len(lm_list))
-                bien = len(lm_list)
-                if bien == n_time_steps:
+                if len(lm_list) == n_time_steps:
                     # Nhận diện
-                    print('cccccc')
-                    thread1 = threading.Thread(target=detectpose, args=(model, [lm_list],))
+                    thread1 = threading.Thread(target=detectpose, args=(model, lm_list,))
                     add_script_run_ctx(thread1)
                     thread1.start()
                     lm_list = []
@@ -347,20 +342,20 @@ elif app_mode == 'Signal check':
             currTime = time.time()
             fps = 1 / (currTime - prevTime)
             prevTime = currTime
-            cv2.imshow("Image", imgRGB)
-            # if cv2.waitKey(1) == ord('q'):
-            #     break
+        cv2.imshow("Image", imgRGB)
+
+        check = ""
+        if dongtac == label:
+            check = "GOOD JOB"
+        else:
+            check = "Keep trying"
 
         # Dashboard
         kpi1_text.write(f"<h1 style='text-align: center; color: red;'>{int(fps)}</h1>", unsafe_allow_html=True)
-        kpi2_text.write(f"<h1 style='text-align: center; color: red;'>{dongtac}</h1>", unsafe_allow_html=True)
+        kpi2_text.write(f"<h1 style='text-align: center; color: red;'>{check}</h1>", unsafe_allow_html=True)
 
         imgRGB = image_resize(image=imgRGB, width=720, height=1280)
         stframe.image(imgRGB, channels='RGB', use_column_width=True)
 
-        # img = image_resize(image=img, width=720, height=1280)
-        # stframe.image(img, channels='BRG', use_column_width=True)
-
-    st.text('Video Processed')
 
     cap.release()

@@ -80,8 +80,10 @@ def detectpose(model, lm_list):
     print(xacsuat)
     xacsuat = xacsuat[0]
     hanhdong = xacsuat.index(max(xacsuat))
-    print(hanhdong)
-
+    print(max(xacsuat))
+    if max(xacsuat) < 0.9988:
+        label = "Detecting..."
+        return label
     label = Action[hanhdong]
     print("Tiep tuc thu")
 

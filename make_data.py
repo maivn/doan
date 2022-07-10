@@ -56,7 +56,7 @@ while len(lm_list) <= no_of_frames:
             break
 
 # Write vào file csv
-df  = pd.DataFrame(lm_list)
+df = pd.DataFrame(lm_list)
 df.to_csv(label + ".txt")
 cap.release()
 cv2.destroyAllWindows()
