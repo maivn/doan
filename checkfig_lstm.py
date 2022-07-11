@@ -25,7 +25,7 @@ mpPose = mp.solutions.pose
 pose = mpPose.Pose()
 mpDraw = mp.solutions.drawing_utils
 
-model = tf.keras.models.load_model("model.h5")
+model = tf.keras.models.load_model("model40.h5")
 
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
@@ -81,7 +81,7 @@ def detectpose(model, lm_list):
     xacsuat = xacsuat[0]
     hanhdong = xacsuat.index(max(xacsuat))
     print(max(xacsuat))
-    if max(xacsuat) < 0.9988:
+    if max(xacsuat) < 0.993:
         label = "Detecting..."
         return label
     label = Action[hanhdong]

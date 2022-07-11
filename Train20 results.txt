@@ -1,0 +1,73 @@
+"D:\Do an\venv\Scripts\python.exe" "D:/Do an/train_lstm.py"
+(6391, 20, 132) (6391, 11)
+2022-07-11 08:16:41.213141: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudnn64_8.dll'; dlerror: cudnn64_8.dll not found
+2022-07-11 08:16:41.213335: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2022-07-11 08:16:41.213967: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/32
+128/128 [==============================] - 8s 27ms/step - loss: 1.5843 - accuracy: 0.4253 - val_loss: 0.6539 - val_accuracy: 0.7283
+Epoch 2/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.7080 - accuracy: 0.7449 - val_loss: 0.7764 - val_accuracy: 0.7361
+Epoch 3/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.6009 - accuracy: 0.7938 - val_loss: 0.1556 - val_accuracy: 0.9853
+Epoch 4/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.3456 - accuracy: 0.9046 - val_loss: 0.1959 - val_accuracy: 0.9189
+Epoch 5/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.3967 - accuracy: 0.8733 - val_loss: 0.5117 - val_accuracy: 0.8651
+Epoch 6/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.2840 - accuracy: 0.9161 - val_loss: 0.0666 - val_accuracy: 0.9892
+Epoch 7/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.1228 - accuracy: 0.9797 - val_loss: 0.1608 - val_accuracy: 0.9570
+Epoch 8/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.3209 - accuracy: 0.9313 - val_loss: 0.3175 - val_accuracy: 0.8182
+Epoch 9/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.2606 - accuracy: 0.9171 - val_loss: 0.0257 - val_accuracy: 1.0000
+Epoch 10/32
+128/128 [==============================] - 3s 20ms/step - loss: 0.0461 - accuracy: 0.9971 - val_loss: 0.0035 - val_accuracy: 1.0000
+Epoch 11/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.0277 - accuracy: 0.9980 - val_loss: 0.0012 - val_accuracy: 1.0000
+Epoch 12/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0187 - accuracy: 0.9988 - val_loss: 5.9269e-04 - val_accuracy: 1.0000
+Epoch 13/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.0149 - accuracy: 0.9985 - val_loss: 3.4145e-04 - val_accuracy: 1.0000
+Epoch 14/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0131 - accuracy: 0.9985 - val_loss: 1.9947e-04 - val_accuracy: 1.0000
+Epoch 15/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.2797 - accuracy: 0.9545 - val_loss: 0.4240 - val_accuracy: 0.9042
+Epoch 16/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.1253 - accuracy: 0.9682 - val_loss: 0.0203 - val_accuracy: 0.9971
+Epoch 17/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.2899 - accuracy: 0.9124 - val_loss: 0.0364 - val_accuracy: 1.0000
+Epoch 18/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.1029 - accuracy: 0.9773 - val_loss: 0.2168 - val_accuracy: 0.9198
+Epoch 19/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.5669 - accuracy: 0.8342 - val_loss: 0.3125 - val_accuracy: 0.8798
+Epoch 20/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.1951 - accuracy: 0.9080 - val_loss: 0.1432 - val_accuracy: 0.8974
+Epoch 21/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0837 - accuracy: 0.9724 - val_loss: 0.0032 - val_accuracy: 1.0000
+Epoch 22/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0200 - accuracy: 0.9990 - val_loss: 8.8914e-04 - val_accuracy: 1.0000
+Epoch 23/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.3487 - accuracy: 0.9173 - val_loss: 0.0963 - val_accuracy: 1.0000
+Epoch 24/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.1106 - accuracy: 0.9799 - val_loss: 0.0446 - val_accuracy: 0.9863
+Epoch 25/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0510 - accuracy: 0.9932 - val_loss: 0.0018 - val_accuracy: 1.0000
+Epoch 26/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0172 - accuracy: 0.9990 - val_loss: 6.7783e-04 - val_accuracy: 1.0000
+Epoch 27/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0121 - accuracy: 0.9993 - val_loss: 3.5380e-04 - val_accuracy: 1.0000
+Epoch 28/32
+128/128 [==============================] - 2s 18ms/step - loss: 0.0108 - accuracy: 0.9993 - val_loss: 2.2171e-04 - val_accuracy: 1.0000
+Epoch 29/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0083 - accuracy: 0.9995 - val_loss: 1.4122e-04 - val_accuracy: 1.0000
+Epoch 30/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0069 - accuracy: 0.9998 - val_loss: 9.4762e-05 - val_accuracy: 1.0000
+Epoch 31/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0078 - accuracy: 0.9993 - val_loss: 6.4453e-05 - val_accuracy: 1.0000
+Epoch 32/32
+128/128 [==============================] - 2s 19ms/step - loss: 0.0060 - accuracy: 0.9990 - val_loss: 4.7499e-05 - val_accuracy: 1.0000
+
+Process finished with exit code 0

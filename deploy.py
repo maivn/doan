@@ -14,7 +14,7 @@ mpPose = mp.solutions.pose
 pose = mpPose.Pose()
 mpDraw = mp.solutions.drawing_utils
 
-model = tf.keras.models.load_model("model.h5")
+model = tf.keras.models.load_model("model20.h5")
 
 # label = "Warmup...."
 
@@ -115,7 +115,7 @@ def detectpose(model, lm_list):
     xacsuat = xacsuat[0]
     hanhdong = xacsuat.index(max(xacsuat))
     print(max(xacsuat))
-    if max(xacsuat) < 0.9988:
+    if max(xacsuat) < 0.993:
         label = "Detecting..."
         return label
     label = Action[hanhdong]
@@ -213,20 +213,16 @@ elif app_mode == 'Detect signal':
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         results = pose.process(imgRGB)
 
-        n_time_steps = 40
+        n_time_steps = 20
         warmup_frames = 0
-        print('aaaaaa')
 
         if i > warmup_frames:
             if results.pose_landmarks:
                 c_lm = make_landmark_timestep(results)
                 lm_list.append(c_lm)
 
-                print(lm_list)
-                print('bbbbbb', len(lm_list))
                 if len(lm_list) == n_time_steps:
                     # Nhận diện
-                    print('cccccc')
                     thread1 = threading.Thread(target=detectpose, args=(model, lm_list,))
                     add_script_run_ctx(thread1)
                     thread1.start()
@@ -322,9 +318,8 @@ elif app_mode == 'Signal check':
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         results = pose.process(imgRGB)
 
-        n_time_steps = 40
+        n_time_steps = 20
         warmup_frames = 0
-        print('aaaaaa')
 
         if i > warmup_frames:
             if results.pose_landmarks:
