@@ -264,7 +264,7 @@ elif app_mode == 'Signal check':
 
     st.sidebar.markdown(
         '''
-        Please enter one of the signal: \n
+        Please enter one of the signals below: \n
         STOP \n
         THIS MARSHALLER \n
         PROCEED TO NEXT MARSHALLER ON THE RIGHT \n
