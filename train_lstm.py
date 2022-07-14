@@ -21,7 +21,7 @@ motiond_df = pd.read_csv("MOVE FORWARD.txt")
 
 X = []
 y = []
-no_of_timesteps = 40
+no_of_timesteps = 20
 
 dataset = statica_df.iloc[:,1:].values
 n_sample = len(dataset)
@@ -109,7 +109,7 @@ model.add(Dropout(0.5))
 model.add(Dense(units = 11, activation="softmax"))
 model.compile(optimizer="adam", metrics = ['accuracy'], loss = "categorical_crossentropy")
 
-model.fit(X_train, y_train, epochs=32, batch_size=32,validation_split=0.2)
-model.save("model40.h5")
+model.fit(X_train, y_train, epochs=13, batch_size=32,validation_split=0.2)
+model.save("model20.h5")
 
 

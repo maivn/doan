@@ -1,0 +1,34 @@
+"D:\Do an\venv\Scripts\python.exe" "D:/Do an/train_lstm.py"
+(6171, 40, 132) (6171, 11)
+Epoch 1/16
+124/124 [==============================] - 10s 43ms/step - loss: 1.6981 - accuracy: 0.3721 - val_loss: 0.9513 - val_accuracy: 0.6326
+Epoch 2/16
+124/124 [==============================] - 4s 33ms/step - loss: 1.0966 - accuracy: 0.5545 - val_loss: 0.6069 - val_accuracy: 0.8057
+Epoch 3/16
+124/124 [==============================] - 4s 33ms/step - loss: 0.6522 - accuracy: 0.7475 - val_loss: 1.2531 - val_accuracy: 0.4089
+Epoch 4/16
+124/124 [==============================] - 4s 33ms/step - loss: 1.2762 - accuracy: 0.4656 - val_loss: 0.7328 - val_accuracy: 0.6437
+Epoch 5/16
+124/124 [==============================] - 4s 33ms/step - loss: 0.7768 - accuracy: 0.6608 - val_loss: 0.7126 - val_accuracy: 0.6275
+Epoch 6/16
+124/124 [==============================] - 4s 34ms/step - loss: 0.9094 - accuracy: 0.6231 - val_loss: 1.0590 - val_accuracy: 0.5202
+Epoch 7/16
+124/124 [==============================] - 5s 37ms/step - loss: 0.8037 - accuracy: 0.6720 - val_loss: 0.3220 - val_accuracy: 0.8887
+Epoch 8/16
+124/124 [==============================] - 5s 37ms/step - loss: 0.4980 - accuracy: 0.8224 - val_loss: 0.2872 - val_accuracy: 0.9028
+Epoch 9/16
+124/124 [==============================] - 5s 36ms/step - loss: 0.2825 - accuracy: 0.9136 - val_loss: 0.6377 - val_accuracy: 0.8188
+Epoch 10/16
+124/124 [==============================] - 4s 33ms/step - loss: 0.4138 - accuracy: 0.8706 - val_loss: 0.2807 - val_accuracy: 0.8927
+Epoch 11/16
+124/124 [==============================] - 4s 35ms/step - loss: 0.2198 - accuracy: 0.9405 - val_loss: 0.0264 - val_accuracy: 1.0000
+Epoch 12/16
+124/124 [==============================] - 4s 33ms/step - loss: 0.2366 - accuracy: 0.9412 - val_loss: 0.0288 - val_accuracy: 0.9970
+Epoch 13/16
+124/124 [==============================] - 4s 33ms/step - loss: 0.0705 - accuracy: 0.9891 - val_loss: 0.1100 - val_accuracy: 0.9626
+Epoch 14/16
+124/124 [==============================] - 4s 35ms/step - loss: 0.0702 - accuracy: 0.9871 - val_loss: 0.0028 - val_accuracy: 1.0000
+Epoch 15/16
+124/124 [==============================] - 4s 34ms/step - loss: 0.0258 - accuracy: 0.9995 - val_loss: 0.0012 - val_accuracy: 1.0000
+Epoch 16/16
+124/124 [==============================] - 4s 34ms/step - loss: 0.0234 - accuracy: 0.9965 - val_loss: 6.4924e-04 - val_accuracy: 1.0000

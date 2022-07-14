@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit.scriptrunner.script_run_context import get_script_run_ctx
 from streamlit.scriptrunner import add_script_run_ctx
 import cv2
 import mediapipe as mp
@@ -15,8 +14,6 @@ pose = mpPose.Pose()
 mpDraw = mp.solutions.drawing_utils
 
 model = tf.keras.models.load_model("model20.h5")
-
-# label = "Warmup...."
 
 Action = ["STOP",
           "THIS MARSHALLER",

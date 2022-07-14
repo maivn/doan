@@ -1,0 +1,31 @@
+"D:\Do an\venv\Scripts\python.exe" "D:/Do an/train_lstm.py"
+(6391, 20, 132) (6391, 11)
+
+Epoch 1/13
+128/128 [==============================] - 8s 27ms/step - loss: 1.6434 - accuracy: 0.3805 - val_loss: 0.5062 - val_accuracy: 0.9355
+Epoch 2/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.5241 - accuracy: 0.8376 - val_loss: 0.0839 - val_accuracy: 1.0000
+Epoch 3/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.5269 - accuracy: 0.8706 - val_loss: 0.1450 - val_accuracy: 0.9374
+Epoch 4/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.4781 - accuracy: 0.8912 - val_loss: 0.2099 - val_accuracy: 0.9150
+Epoch 5/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.3346 - accuracy: 0.9090 - val_loss: 0.1497 - val_accuracy: 0.9081
+Epoch 6/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.1661 - accuracy: 0.9482 - val_loss: 0.0168 - val_accuracy: 1.0000
+Epoch 7/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.0488 - accuracy: 0.9958 - val_loss: 0.0019 - val_accuracy: 1.0000
+Epoch 8/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.3053 - accuracy: 0.9313 - val_loss: 0.5656 - val_accuracy: 0.8964
+Epoch 9/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.1180 - accuracy: 0.9792 - val_loss: 0.0035 - val_accuracy: 1.0000
+Epoch 10/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.0394 - accuracy: 0.9973 - val_loss: 0.6355 - val_accuracy: 0.8964
+Epoch 11/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.1830 - accuracy: 0.9609 - val_loss: 0.0051 - val_accuracy: 1.0000
+Epoch 12/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.0210 - accuracy: 0.9993 - val_loss: 0.0012 - val_accuracy: 1.0000
+Epoch 13/13
+128/128 [==============================] - 2s 18ms/step - loss: 0.0188 - accuracy: 0.9988 - val_loss: 4.5628e-04 - val_accuracy: 1.0000
+
+Process finished with exit code 0
